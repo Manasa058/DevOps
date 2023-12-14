@@ -1,0 +1,8 @@
+FROM openjdk
+WORKDIR /app
+COPY . /app
+RUN javac file.java
+CMD ["java","file"]
+
+docker built -t image name
+docker run --name app1 image name
